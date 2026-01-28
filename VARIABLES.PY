@@ -1,5 +1,6 @@
 # Tipos de Variables
 print ("otro mensaje")
+print ("mensaje 2")
 var=10
 var_dos=20
 varTres=30
