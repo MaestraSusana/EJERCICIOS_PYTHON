@@ -1,4 +1,4 @@
-aludo='Hola Mundo'
+saludo='Hola Mundo'
 
 print("LONGITUD DE CADENAS")
 print("-"*30)
@@ -11,6 +11,8 @@ print("CADENAS Y CADENAS")
 print("-"*30)
 cad="Esta es una 'cadena con comillas simples' dentro de comillas dobles"
 print(cad)
+cad=cad +" algo mas "
+print("*"*30)
 print(cad[0])
 # cad[0]='e'  #Error, las cadenas son inmutables
 lenguaje="Python"
@@ -47,6 +49,8 @@ print(nombres.replace("a","x"))
 print(nombres.split(","))
 print(nombres.count("a"))
 print(elementos.count("a"))
+# el slipt el 0 representa la primer posicion de izq a derecha
+# el -1 representa el primer valor de derecha a izquierda
 print(nombres.split(",")[0]) 
 print(nombres.split(",")[-1]) 
 print(nombres.split(",")[-2])
@@ -55,6 +59,7 @@ print(nombres.replace("Juan","Pedro"))
 print(nombres.replace(","," "))
 print(nombres.endswith("Luis"))
 print(nombres.startswith("Ana"))
+# la posicion inicia en 0
 print(nombres.index("Carlos"))
 print(nombres.find("Juan"))
 
@@ -69,3 +74,21 @@ print(texto_multilinea)
 cadena_limpia=texto_multilinea.replace("[]","")\
     .replace("**","").replace("$$","")
 print(cadena_limpia)
+
+print("-"*30)
+print("CADENAS FORMATEADAS")
+print("-"*30)
+nombre="Gabriel"
+edad=28
+
+mensaje="Mi nombre es {} y tengo {} años.".format(nombre,edad)
+print(mensaje)
+mitote="""Para enterarlos que 
+el dia de ayer me encontré con {}
+que no veía desde que se graduó con {}.
+y ahora resulta que ya no vive con {}
+el que eras amigo de {}
+porque se juntó con {}"""
+# el * significa que s eva a manejar los textos individuales de una lista
+mitote_completo=mitote.format(*nombres.split(","))
+print(mitote_completo)
